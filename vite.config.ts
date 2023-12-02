@@ -5,4 +5,12 @@ import eslint from 'vite-plugin-eslint'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), eslint()],
+  css: {
+    // css预处理器
+    preprocessorOptions: {
+      less: {
+        additionalData: '@import "./src/styles/var.less";',
+      },
+    },
+  },
 })
